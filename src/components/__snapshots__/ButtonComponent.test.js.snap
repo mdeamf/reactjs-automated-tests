@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button changes when clicked 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  My snapshot button!
+</button>
+`;
+
+exports[`Button changes when clicked 2`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+>
+  My snapshot button!
+</button>
+`;
+
+exports[`Button changes when clicked 3`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  My snapshot button!
+</button>
+`;
