@@ -69,7 +69,12 @@ function ListItemsComponent() {
               onChange={(e) => setNewItem(e.target.value)}
             />
           </label>
-          <input data-testid="add-item" type="submit" value="Add Item" />
+          <input
+            data-testid="add-item"
+            type="submit"
+            value="Add Item"
+            disabled={newItem === ''}
+          />
         </form>
         <ul>{ListComponent}</ul>
       </header>
