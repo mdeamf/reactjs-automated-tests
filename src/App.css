@@ -32,7 +32,33 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  margin: 8px;
+}
+
+.counter-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.counter-buttons>button {
+  margin: 0 16px 16px 16px;
+}
+
+.items-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-input>input {
+  margin-bottom: 16px;
 }
