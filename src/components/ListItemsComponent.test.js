@@ -55,7 +55,7 @@ describe('ListItemsComponent Counter', () => {
 });
 
 describe('ListItemsComponent Item List', () => {
-  test('Prsent the Item List elements', () => {
+  test('Present the Item List elements', () => {
     render(<ListItemsComponent />);
     const listItemInput = screen.getByLabelText(/Add New Item/i);
     const addItemButton = screen.getByTestId('add-item');
@@ -63,6 +63,17 @@ describe('ListItemsComponent Item List', () => {
     // Check the existence of each element.
     expect(listItemInput).toBeInTheDocument();
     expect(addItemButton).toBeInTheDocument();
+  });
+
+  test('User cant add item to page if the text is empty', () => {
+    render(<ListItemsComponent />);
+    const listItemInput = screen.getByLabelText(/Add New Item/i);
+    const addItemButton = screen.getByTestId('add-item');
+
+    expect(listItemInput).toHaveValue('');
+    expect(addItemButton).toBeDisabled();
+    userEvent.click(addItemButton);
+    expect(screen.queryByTestId('item0')).not.toBeInTheDocument();
   });
 
   test('User can add item to page', () => {
